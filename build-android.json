@@ -1,13 +1,13 @@
 {
   "android": {
     "release": {
-      "keystore": "..\\release\\key\\friendsshop.keystore",
+      "keystore": "..\\core-crawl\\release\\key\\friendsshop.keystore",
       "storePassword": "@Sonhavt89",
       "alias": "friendsshop",
       "password": "@Sonhavt89"
     },
     "debug": {
-      "keystore": "..\\release\\key\\friendsshop.keystore",
+      "keystore": "..\\core-crawl\\release\\key\\friendsshop.keystore",
       "storePassword": "@Sonhavt89",
       "alias": "friendsshop",
       "password": "@Sonhavt89"
