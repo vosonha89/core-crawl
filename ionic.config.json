@@ -1,0 +1,7 @@
+{
+  "name": "net.vietmo.coreCrawl",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
