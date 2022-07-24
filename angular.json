@@ -31,10 +31,14 @@
               }
             ],
             "styles": [
+              "src/assets/css/bootstrap.css",
               "src/theme/variables.scss",
               "src/global.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/bootstrap.js",
+              "src/assets/js/popper.min.js"
+            ],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,

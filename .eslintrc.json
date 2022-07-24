@@ -14,10 +14,17 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "max-len": [
+          2,
+          {
+            "code": 200,
+            "ignorePattern": "^import .*"
+          }
+        ],
         "@angular-eslint/component-class-suffix": [
           "error",
           {
-            "suffixes": ["Page", "Component"]
+            "suffixes": [ "Page", "Component" ]
           }
         ],
         "@angular-eslint/component-selector": [

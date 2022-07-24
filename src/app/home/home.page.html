@@ -1,20 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 py-3">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-lazada-tab" data-bs-toggle="tab" data-bs-target="#nav-lazada" type="button" role="tab" aria-controls="nav-lazada" aria-selected="true">Lazada</button>
+            <button class="nav-link" id="nav-shopee-tab" data-bs-toggle="tab" data-bs-target="#nav-shopee" type="button" role="tab" aria-controls="nav-shopee" aria-selected="false">Shopee</button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-lazada" role="tabpanel" aria-labelledby="nav-lazada-tab" tabindex="0">
+            <div class="row">
+              <div class="col-12 py-2 d-flex">
+                <input class="form-control" placeholder="Enter lazada product link" [(ngModel)]="lazadaItemLink" />
+                <button class="btn btn-primary ms-2" (click)="getLazadaItem()">Add</button>
+              </div>
+              <div class="col-12 py-2">
+                <div class="card w-100 text-dark mt-2" *ngFor="let item of lazadaItems; index as i;">
+                  <div class="card-body">
+                    <div class="card-img-top d-flex justify-content-center">
+                      <img [src]="item.image" class="img-fluid" width="175px">
+                    </div>
+                    <h6 class="card-title">{{item.name}}</h6>
+                    <p class="card-text">
+                      <small>Price:</small>
+                      {{item.offers.price}}
+                    <small>{{item.offers.priceCurrency}}</small>
+                    </p>
+                  </div>
+                  <div class="card-footer d-flex justify-content-end">
+                    <button class="btn btn-sm btn-outline-danger" (click)="removeLazadaItem(item.sku)">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-shopee" role="tabpanel" aria-labelledby="nav-shopee-tab" tabindex="0">On going</div>
+        </div>
+      </div>
+    </div>
   </div>
 </ion-content>
